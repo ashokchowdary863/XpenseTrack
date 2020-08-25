@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailService", "EmailService\EmailService.csproj", "{6FE79542-F2E1-4817-8C6C-1145184593D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpenseTrack.Users", "XpenseTrack.Users\XpenseTrack.Users.csproj", "{2DBC4158-A869-4C03-9590-2EC2805846B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpenseTrack.Web", "XpenseTrack.Web\XpenseTrack.Web.csproj", "{2B56F369-5A2C-457C-B157-D622DFA48DCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpenseTrack.Web", "XpenseTrack.Web\XpenseTrack.Web.csproj", "{3204CCD7-BD4A-4D0D-A8D0-273E39167C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{D707C459-A170-4F62-A19F-B4E8017814BB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{55A7651B-EEBC-44E9-A797-894A2D7608E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpenseTrack.Database", "XpenseTrack.Database\XpenseTrack.Database.csproj", "{FD4EF8FD-3854-4F4A-A600-938AFC6F5A3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FE79542-F2E1-4817-8C6C-1145184593D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FE79542-F2E1-4817-8C6C-1145184593D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FE79542-F2E1-4817-8C6C-1145184593D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FE79542-F2E1-4817-8C6C-1145184593D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D707C459-A170-4F62-A19F-B4E8017814BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D707C459-A170-4F62-A19F-B4E8017814BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D707C459-A170-4F62-A19F-B4E8017814BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D707C459-A170-4F62-A19F-B4E8017814BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBC4158-A869-4C03-9590-2EC2805846B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBC4158-A869-4C03-9590-2EC2805846B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBC4158-A869-4C03-9590-2EC2805846B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBC4158-A869-4C03-9590-2EC2805846B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3204CCD7-BD4A-4D0D-A8D0-273E39167C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3204CCD7-BD4A-4D0D-A8D0-273E39167C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3204CCD7-BD4A-4D0D-A8D0-273E39167C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3204CCD7-BD4A-4D0D-A8D0-273E39167C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4EF8FD-3854-4F4A-A600-938AFC6F5A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4EF8FD-3854-4F4A-A600-938AFC6F5A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4EF8FD-3854-4F4A-A600-938AFC6F5A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4EF8FD-3854-4F4A-A600-938AFC6F5A3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
