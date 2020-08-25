@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XpenseTrack.Users.Models;
 using XpenseTrack.Users.Services;
+using XpenseTrack.Web.Attributes;
 
 namespace XpenseTrack.Web.Controllers {
   [Route( "api/[controller]" )]
@@ -13,10 +11,11 @@ namespace XpenseTrack.Web.Controllers {
   public class UsersController: ControllerBase {
     private readonly IUserService _userService;
 
-    public UsersController() {
-      _userService = new UserService();
+    public UsersController( IUserService userService ) {
+      _userService = userService;
     }
 
+    [Authorize]
     [HttpGet]
     [Route( "/users" )]
     public IEnumerable<User> GetAllUsers() {
@@ -29,6 +28,7 @@ namespace XpenseTrack.Web.Controllers {
       }
     }
 
+    [Authorize]
     [HttpGet]
     [Route( "/users/userName" )]
     public User GetUser( string userName ) {
@@ -41,6 +41,7 @@ namespace XpenseTrack.Web.Controllers {
       }
     }
 
+    [Authorize]
     [HttpGet]
     [Route( "/users/firstName/lastName" )]
     public User GetUser( string firstName, string lastName ) {

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using XpenseTrack.Users.Models;
 
 namespace XpenseTrack.Users.Services {
@@ -8,6 +6,7 @@ namespace XpenseTrack.Users.Services {
     IList<User> GetAllRecords();
     User GetRecordByUserName( string userName );
     User GetRecordByFirstName( string firstName, string lastName );
+    LoginStatus CheckCredentials( User user );
 
   }
 }

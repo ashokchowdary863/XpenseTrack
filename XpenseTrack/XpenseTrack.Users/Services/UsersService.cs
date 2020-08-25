@@ -21,8 +21,30 @@ namespace XpenseTrack.Users.Services {
       return _collection.Find( new BsonDocument() ).ToList();
     }
 
+    public LoginStatus CheckCredentials( User user ) {
+      var status = new LoginStatus { Success = false };
+      if ( string.IsNullOrEmpty( user.UserName ) && string.IsNullOrEmpty( user.Email ) ) {
+        return status;
+      }
+      if ( !string.IsNullOrEmpty( user.UserName ) ) {
+        var dbUser = GetRecordByUserName( user.UserName );
+        status.User = dbUser;
+        status.Success = dbUser.Password.Equals( user.Password );
+      }
+      if ( !string.IsNullOrEmpty( user.Email ) ) {
+        var dbUser = GetRecordByEmail( user.UserName );
+        status.User = dbUser;
+        status.Success = dbUser.Password.Equals( user.Password );
+      }
+      return status;
+    }
+
     public User GetRecordByUserName( string userName ) {
       var filter = Builders<User>.Filter.Eq( "UserName", userName );
+      return _collection.Find( filter ).FirstOrDefault();
+    }
+    public User GetRecordByEmail( string email ) {
+      var filter = Builders<User>.Filter.Eq( "Email", email );
       return _collection.Find( filter ).FirstOrDefault();
     }
 
