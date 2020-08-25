@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailService", "EmailService\EmailService.csproj", "{6FE79542-F2E1-4817-8C6C-1145184593D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpenseTrack.Web", "XpenseTrack.Web\XpenseTrack.Web.csproj", "{2B56F369-5A2C-457C-B157-D622DFA48DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{D707C459-A170-4F62-A19F-B4E8017814BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{55A7651B-EEBC-44E9-A797-894A2D7608E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B56F369-5A2C-457C-B157-D622DFA48DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D707C459-A170-4F62-A19F-B4E8017814BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D707C459-A170-4F62-A19F-B4E8017814BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D707C459-A170-4F62-A19F-B4E8017814BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D707C459-A170-4F62-A19F-B4E8017814BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A7651B-EEBC-44E9-A797-894A2D7608E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
