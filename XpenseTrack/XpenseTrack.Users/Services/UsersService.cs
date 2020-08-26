@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using XpenseTrack.Database;
@@ -12,8 +13,8 @@ namespace XpenseTrack.Users.Services {
     private readonly IMongoCollection<User> _collection;
     private readonly string TableName = "users";
     private IMongoDatabase _db;
-    public UserService() {
-      _db = ConnectionManager.GetConnection( "mongodb+srv://Teja:2C7blwxcNcqOciLB@cluster0.8lr10.azure.mongodb.net/Application?retryWrites=true&w=majority", "Application" );
+    public UserService( IConfiguration configuration ) {
+      _db = ConnectionManager.GetConnection( configuration["Mongo:ConnectionString"], configuration["Mongo:DbName"] );
       _collection = _db.GetCollection<User>( TableName );
     }
 
@@ -32,7 +33,7 @@ namespace XpenseTrack.Users.Services {
         status.Success = dbUser.Password.Equals( user.Password );
       }
       if ( !string.IsNullOrEmpty( user.Email ) ) {
-        var dbUser = GetRecordByEmail( user.UserName );
+        var dbUser = GetRecordByEmail( user.Email );
         status.User = dbUser;
         status.Success = dbUser.Password.Equals( user.Password );
       }
@@ -51,6 +52,11 @@ namespace XpenseTrack.Users.Services {
     public User GetRecordByFirstName( string firstName, string lastName ) {
       var filter = Builders<User>.Filter.Where( x => x.FirstName.Equals( firstName ) && x.LastName.Equals( lastName ) );
       return _collection.Find( filter ).FirstOrDefault();
+    }
+
+    public IList<Category> GetCategories() {
+      var collection = _db.GetCollection<Category>( "categories" );
+      return collection.Find( new BsonDocument() ).ToList();
     }
   }
 }
