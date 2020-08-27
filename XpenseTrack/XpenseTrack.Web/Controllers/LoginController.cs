@@ -28,7 +28,6 @@ namespace XpenseTrack.Web.Controllers {
     public IActionResult Login( [FromBody]User user ) {
       IActionResult response = Unauthorized();
       var status = _userService.CheckCredentials( user );
-
       if ( status.Success ) {
         var tokenString = GenerateJSONWebToken( status.User );
         response = Ok( new { token = tokenString } );
