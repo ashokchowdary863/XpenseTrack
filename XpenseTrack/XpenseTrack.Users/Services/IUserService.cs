@@ -8,6 +8,7 @@ namespace XpenseTrack.Users.Services {
     User GetRecordByFirstName( string firstName, string lastName );
     LoginStatus CheckCredentials( User user );
     IList<Category> GetCategories();
+    void Register( User user );
 
   }
 }
