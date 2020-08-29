@@ -53,5 +53,17 @@ namespace XpenseTrack.Web.Controllers {
         return new User();
       }
     }
+
+    [HttpGet]
+    [Route( "/checkUser" )]
+    public bool CheckUserName( string userName ) {
+      try {
+        return _userService.GetRecordByUserName(userName ) != null;
+      }
+      catch ( Exception e ) {
+        Console.WriteLine( e );
+        return false;
+      }
+    }
   }
 }

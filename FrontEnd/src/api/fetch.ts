@@ -50,7 +50,6 @@ export default (url: string, method: string, payload: object) => {
           throw new ServerError(response.statusText, serverError);
         });
       }
-
       return response.json();
     })
     .catch((err) => {

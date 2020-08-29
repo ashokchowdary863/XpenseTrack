@@ -99,3 +99,8 @@
   display: block;
   font-size: 18px;
 }
+.isa_error {
+  margin-top:10px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
